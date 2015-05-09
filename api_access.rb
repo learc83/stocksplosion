@@ -15,8 +15,9 @@ class ApiAccess
 	def self.get_detail(symbol, start_date)
 		now = Time.now
 		end_date = now.strftime("%Y%m%d")
+		start = start_date.strftime("%Y%m%d")
 
 		RestClient.get "http://stocksplosion.apsis.io/api/company/#{symbol}"\
-			"?startdate=#{start_date}&enddate=#{end_date}", @@headers
+			"?startdate=#{start}&enddate=#{end_date}", @@headers
 	end
 end

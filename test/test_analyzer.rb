@@ -32,5 +32,8 @@ class TestAnalyzer < Test::Unit::TestCase
 
 		analyzer = Analyzer.new(@@sell_price_array)
 		assert_equal('sell', analyzer.buy_sell_or_wait)
+
+		analyzer = Analyzer.new(@@wait_price_array)
+		assert_equal('wait', analyzer.buy_sell_or_wait)
 	end
 end
