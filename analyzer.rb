@@ -20,7 +20,9 @@ class Analyzer
 		long_sma = simple_moving_avg(3)
 		short_sma = simple_moving_avg(2)
 
-		sensitivity = long_sma * 0.1
+		#alpha can be tuned with more data
+		alpha = 0.1
+		sensitivity = long_sma * alpha
 
 		#Simplistic version of the SMA crossover algorithm. If the Short term 
 		#SMA is higher by a certain threshold, then the stock is on the way up
