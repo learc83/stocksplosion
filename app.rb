@@ -49,7 +49,8 @@ def generate_detail_response(sym, start_date)
 	#Strip year from dates
 	date_prices =  Hash[date_prices.map {|k,v| [to_month_day(k),v]}]
 
-	return_value = {'prices' => date_prices, 'decision' => analyzer.buy_sell_or_wait}
+	return_value = {'prices' => date_prices, 
+		'decision' => analyzer.buy_sell_or_wait}
 
 	JSON.generate(return_value)
 end
