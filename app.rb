@@ -7,9 +7,10 @@ get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
-# Return entire list of symbols for autocomplete
-#TODO maybe return names as well
-#WARNING we might have to change strategies if the list grows too long
+#These method basically act as proxies for the stocksplosion api. We could
+#call them from the client, but by placing them here we have more flexibility
+#Render them directly to html, JavaScript doesn't have to deal with any future
+#authentication that may be added to the API etc...
 get '/list_companies' do
 	ApiAccess.list_companies
 end
