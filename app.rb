@@ -15,12 +15,14 @@ end
 #Render them directly to html, JavaScript doesn't have to deal with any future
 #authentication that may be added to the API etc...
 get '/list_companies' do
-	#TODO change content type to JSON
+	content_type :json
 	ApiAccess.list_companies
 end
 
 # Return company stock price history and decision
 get '/company_detail/:symbol/:created/:days_back' do |sym, created, days_back|
+	content_type :json
+
 	#Check to make sure that there is enough data to go back days_back
 	created_date = Date.parse(created)
 	start_date = Time.now.to_date - days_back.to_i
