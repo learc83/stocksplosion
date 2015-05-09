@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'date'
+require 'json'
 require_relative 'api_access.rb'
+require_relative 'analyzer.rb'
 
 # Sinatra Routes
 
@@ -13,6 +15,7 @@ end
 #Render them directly to html, JavaScript doesn't have to deal with any future
 #authentication that may be added to the API etc...
 get '/list_companies' do
+	#TODO change content type to JSON
 	ApiAccess.list_companies
 end
 
@@ -31,7 +34,16 @@ get '/company_detail/:symbol/:created/:days_back' do |sym, created, days_back|
 
 	response = ApiAccess.get_detail(sym, start_date)
 
+	json_hash = JSON.parse(response)
+	date_prices = json_hash['prices']
+	#get just the prices
+	prices = date_prices.map {|r| r[1]}
+	
+	analyzer = Analyzer.new(prices)
 
+	return_value = {'prices' => date_prices, 'decision' => analyzer.buy_sell_or_wait}
+
+	JSON.generate(return_value)
 end
 
 #Helper Functions

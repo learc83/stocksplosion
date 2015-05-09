@@ -21,7 +21,7 @@ class Analyzer
 		short_sma = simple_moving_avg(2)
 
 		#alpha can be tuned with more data
-		alpha = 0.1
+		alpha = 0.01
 		sensitivity = long_sma * alpha
 
 		#Simplistic version of the SMA crossover algorithm. If the Short term 
