@@ -14,11 +14,11 @@ get '/list_companies' do
 	ApiAccess.list_companies
 end
 
-get '/company_detail/:symbol' do |sym|
-	ApiAccess.get_detail(sym)
+get '/company_detail/:symbol/:start_date' do |sym, start|
+	ApiAccess.get_detail(sym, start)
 end
 
-get '/stock_decision/:symbol' do |sym|
-	ApiAccess.get_decision(sym)
+get '/stock_decision/:symbol/:start_date' do |sym, start|
+	ApiAccess.get_decision(sym, start)
 end
 
