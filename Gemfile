@@ -3,4 +3,4 @@ ruby '2.2.2'
 
 gem 'sinatra'
 gem 'thin'
-gem 'rest_client'
+gem 'rest-client'
