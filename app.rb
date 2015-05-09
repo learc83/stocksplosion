@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'api_access.rb'
 
 # Sinatra Routes
 
@@ -10,13 +11,14 @@ end
 #TODO maybe return names as well
 #WARNING we might have to change strategies if the list grows too long
 get '/list_companies' do
-	'list of companies'
+	ApiAccess.list_companies
 end
 
 get '/company_detail/:symbol' do |sym|
-	"company id: #{sym}"
+	ApiAccess.get_detail(sym)
 end
 
 get '/stock_decision/:symbol' do |sym|
-	"buy company id: #{sym}"
+	ApiAccess.get_decision(sym)
 end
+
