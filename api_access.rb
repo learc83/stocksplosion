@@ -13,15 +13,6 @@ class ApiAccess
 	end
 
 	def self.get_detail(symbol, start_date)
-		get_detail_from_API(symbol, start_date)
-	end
-
-	def self.get_decision(symbol, start_date)
-		response = get_detail_from_API(symbol, start_date)
-	end
-
-
-	def self.get_detail_from_API(symbol, start_date) 
 		headers = {
   			:content_type => 'application/json'
 		}
@@ -29,8 +20,7 @@ class ApiAccess
 		now = Time.now
 		end_date = now.strftime("%Y%m%d")
 
-		RestClient.get "http://stocksplosion.apsis.io/api/company/DXBT"\
+		RestClient.get "http://stocksplosion.apsis.io/api/company/#{symbol}"\
 			"?startdate=#{start_date}&enddate=#{end_date}", headers
 	end
-	private_class_method :get_detail_from_API
 end

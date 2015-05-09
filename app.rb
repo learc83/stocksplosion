@@ -14,11 +14,7 @@ get '/list_companies' do
 	ApiAccess.list_companies
 end
 
+# Return company stock price history and decision
 get '/company_detail/:symbol/:start_date' do |sym, start|
 	ApiAccess.get_detail(sym, start)
 end
-
-get '/stock_decision/:symbol/:start_date' do |sym, start|
-	ApiAccess.get_decision(sym, start)
-end
-
