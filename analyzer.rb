@@ -16,5 +16,22 @@ class Analyzer
 		prices.inject{ |sum, element| sum + element }.to_f / prices.size
 	end
 
-	
+	def buy_sell_or_wait
+		long_sma = simple_moving_avg(3)
+		short_sma = simple_moving_avg(2)
+
+		sensitivity = long_sma * 0.1
+
+		#Simplistic version of the SMA crossover algorithm. If the Short term 
+		#SMA is higher by a certain threshold, then the stock is on the way up
+		#If the Long term SMA is higher by the same threshold, the stock is
+		#likely headed down. Else do nothing.
+		if (short_sma - long_sma) > sensitivity
+			return 'buy'
+		elsif (long_sma - short_sma) > sensitivity
+			return 'sell'
+		else
+			return 'wait'
+		end
+	end
 end
