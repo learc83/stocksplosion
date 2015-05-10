@@ -36,6 +36,7 @@ end
 
 #Helper Functions
 def generate_detail_response(sym, start_date)
+	#TODO handle error from ApiAccess
 	response = ApiAccess.get_detail(sym, start_date)
 
 	json_hash = JSON.parse(response)
@@ -43,7 +44,9 @@ def generate_detail_response(sym, start_date)
 	
 	#get just the prices
 	prices = date_prices.map {|r| r[1]}
-	
+	puts prices;
+
+	#TODO handle error from analyzer "not enough data"
 	analyzer = Analyzer.new(prices)
 
 	#Strip year from dates
