@@ -19,16 +19,16 @@ get '/list_companies' do
 end
 
 # Return company stock price history and decision
-get '/company_detail/:symbol/:created/:days_back' do |sym, created, days_back|
+get '/company_detail/:symbol/:days_back' do |sym, days_back|
 	content_type :json
 
 	#Check to make sure that there is enough data to go back days_back
-	created_date = Date.parse(created)
+	#created_date = Date.parse(created)
 	start_date = Time.now.to_date - days_back.to_i
 
-	if created_date > start_date
-		return "{'error': Stock is too new to go back #{days_back} days.}"
-	end
+	#if created_date > start_date
+	#	return "{'error': Stock is too new to go back #{days_back} days.}"
+	#end
 
 	generate_detail_response(sym, start_date)
 end
