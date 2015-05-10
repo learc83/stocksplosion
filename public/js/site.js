@@ -64,6 +64,21 @@ $("#companyDetail").submit(function(e){
       });
       priceChart.destroy();
       priceChart = new Chart(ctx).Line(chartData);
+
+      var decision = $("#decision")
+      decision.html(sym + ': ' + response['decision']);
+      
+      switch(response['decision']) {
+        case 'buy':
+          decision.css("color", "green");
+          break;
+        case 'sell':
+          decision.css("color", "red");
+          break;
+        case 'wait':
+          decision.css("color", "black");
+          break;
+      }
     }
   });
   return false;
