@@ -3,7 +3,7 @@ var companies = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('symbol'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
 
-  prefetch: 'http://localhost:4567/list_companies'
+  prefetch: '/list_companies'
 });
 
 $('#autocomplete .typeahead').typeahead({
