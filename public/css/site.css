@@ -84,3 +84,7 @@ h1 {
 .tt-suggestion p {
   margin: 0;
 }
+
+.empty-message {
+	padding-left: 10px;
+}

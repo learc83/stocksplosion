@@ -30,12 +30,12 @@ var chartData = {
     datasets: [
         {
             label: "dataset",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
+            pointHighlightStroke: "rgba(151,187,205,1)",
             data: []
         },
     ]
@@ -67,7 +67,7 @@ $("#companyDetail").submit(function(e){
 
       var decision = $("#decision")
       decision.html(sym + ': ' + response['decision']);
-      
+
       switch(response['decision']) {
         case 'buy':
           decision.css("color", "green");
