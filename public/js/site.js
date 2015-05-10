@@ -24,17 +24,58 @@ $('#autocomplete .typeahead').typeahead({
     suggestion: Handlebars.compile('<div><strong>{{symbol}}</strong> – {{name}}</div>')}
 });
 
+//Price Chart
+var chartData = {
+    labels: [],
+    datasets: [
+        {
+            label: "dataset",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: []
+        },
+    ]
+};
+
+Chart.defaults.Line.bezierCurve = false;
+var ctx = $("#priceChart").get(0).getContext("2d");
+var priceChart = new Chart(ctx).Line(chartData);
+
+
 //Company Detail and decision
 $("#companyDetail").submit(function(e){
   var sym = $("#sym").val();
   $.ajax({
     type: "GET",
-    url: "/company_detail/" + sym + "/20150506/3",
-    success:function(data){
-      Object.keys(data['prices']).forEach(function (key) {
-        alert(data['prices'][key]);
+    url: "/company_detail/" + sym + "/20150506/4",
+    success:function(response){
+      //priceData = data['prices']
+      chartData.labels = [];
+      chartData.datasets[0].data = [];
+
+      Object.keys(response['prices']).forEach(function (key) {
+        //alert(data['prices'][key]);
+        chartData.labels.push(key);
+        chartData.datasets[0].data.push(response['prices'][key])
       });
+      priceChart.destroy();
+      priceChart = new Chart(ctx).Line(chartData);
     }
   });
   return false;
 });
+
+
+
+
+
+
+
+
+
+
+

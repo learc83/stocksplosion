@@ -10,6 +10,10 @@ h1 {
 	padding-left: 0px;
 }
 
+#priceChart {
+	margin-left: 50px;
+}
+
 
 .typeahead,
 .tt-query,
