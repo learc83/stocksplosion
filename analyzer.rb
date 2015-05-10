@@ -17,7 +17,7 @@ class Analyzer
 	end
 
 	def buy_sell_or_wait
-		long_sma = simple_moving_avg(3)
+		long_sma = simple_moving_avg(4)
 		short_sma = simple_moving_avg(2)
 
 		#alpha can be tuned with more data
