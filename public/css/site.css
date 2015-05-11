@@ -10,15 +10,11 @@ h1 {
 	padding-left: 0px;
 }
 
-#priceChart {
-	margin-left: 50px;
-}
-
 
 .typeahead,
 .tt-query,
 .tt-hint {
-  width: 320px;
+  width: 220px;
   padding: 8px 12px;
   font-size: 24px;
   line-height: 30px;
@@ -32,6 +28,7 @@ h1 {
 .typeahead {
   background-color: #fff;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .typeahead:focus {
@@ -49,7 +46,7 @@ h1 {
 }
 
 .tt-menu {
-  width: 320px;
+  width: 400px;
   margin: 12px 0;
   padding: 8px 0;
   background-color: #fff;

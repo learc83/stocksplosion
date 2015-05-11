@@ -22,13 +22,7 @@ end
 get '/company_detail/:symbol/:days_back' do |sym, days_back|
 	content_type :json
 
-	#Check to make sure that there is enough data to go back days_back
-	#created_date = Date.parse(created)
 	start_date = Time.now.to_date - days_back.to_i
-
-	#if created_date > start_date
-	#	return "{'error': Stock is too new to go back #{days_back} days.}"
-	#end
 
 	generate_detail_response(sym, start_date)
 end
@@ -44,7 +38,6 @@ def generate_detail_response(sym, start_date)
 	
 	#get just the prices
 	prices = date_prices.map {|r| r[1]}
-	puts prices;
 
 	#TODO handle error from analyzer "not enough data"
 	analyzer = Analyzer.new(prices)

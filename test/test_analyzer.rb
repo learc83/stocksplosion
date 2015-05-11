@@ -5,9 +5,9 @@ class TestAnalyzer < Test::Unit::TestCase
 	@@valid_price_array = [17057.15, 16894.07, 15899.8]
 	@@invalid_price_array = [17057.15, 16894.07]
 	@@sma_price_array = [50.00, 1.00, 2.00, 3.00]
-	@@buy_price_array = [0.00, 1.00, 10.00, 100.00]
-	@@sell_price_array = [100.00, 10.00, 1.00, 0.01]
-	@@wait_price_array = [50.50, 50.75, 50.60, 50.40]	
+	@@buy_price_array = Array.new(50,0) + [0.00, 1.00, 10.00, 100.00]
+	@@sell_price_array = Array.new(50,100) + [100.00, 10.00, 1.00, 0.01]
+	@@wait_price_array = Array.new(50,50.50) + [50.50, 50.75, 50.60, 50.40]
 
 	def test_init 
 		assert_raise ArgumentError do 

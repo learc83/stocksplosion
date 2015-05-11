@@ -17,11 +17,11 @@ class Analyzer
 	end
 
 	def buy_sell_or_wait
-		long_sma = simple_moving_avg(4)
-		short_sma = simple_moving_avg(2)
+		long_sma = simple_moving_avg(30)
+		short_sma = simple_moving_avg(4)
 
 		#alpha can be tuned with more data
-		alpha = 0.01
+		alpha = 0.005
 		sensitivity = long_sma * alpha
 
 		#Simplistic version of the SMA crossover algorithm. If the Short term 
