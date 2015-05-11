@@ -14,10 +14,6 @@ programming language (version 2.2.2). How you do this depends
 on what operating system you're using. If you already have Ruby v2.2.2 installed,
 you can skip ahead to step 2.
 
-##Windows 
-The easiest way to set up Ruby on Windows is by using the RubyInstaller
-for Windows located here: http://rubyinstaller.org/
-
 ##OS X
 All modern versions of OS X ship with a Ruby interpreter, but it's not
 version 2.2.2, so you'll need to install that version. The easiest way to 
@@ -36,6 +32,13 @@ Installation instructions for Ubuntu 15.04 can be found here (just install Ruby
 and ignore the section about installing Rails--you won't need it for this
 project):
 https://gorails.com/setup/ubuntu/15.04
+
+##Windows 
+The easiest way to set up Ruby on Windows is by using the RubyInstaller
+for Windows located here: http://rubyinstaller.org/
+
+The recommended development environments are Linux and OS X, because some of the 
+commands Step 2 may fail on Windows.
 
 #Step 2.
 
