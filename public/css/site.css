@@ -10,6 +10,10 @@ h1 {
 	padding-left: 0px;
 }
 
+#decision {
+  text-transform: uppercase;
+}
+
 .typeahead,
 .tt-query,
 .tt-hint {

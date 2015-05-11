@@ -79,6 +79,9 @@ $("#companyDetail").submit(function(e){
           decision.css("color", "black");
           break;
       }
+    },
+    error:function(resonse){
+      alert("No data found for ticker symbol: " + sym)
     }
   });
   return false;
