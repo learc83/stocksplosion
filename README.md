@@ -14,12 +14,12 @@ programming language (version 2.2.2). How you do this depends
 on what operating system you're using. If you already have Ruby v2.2.2 installed,
 you can skip ahead to step 2.
 
-Windows: 
+##Windows 
 The easiest way to set up Ruby on Windows is by using the RubyInstaller
 for Windows located here: http://rubyinstaller.org/
 
-OS X: 
-All modern version of OS X ship with a Ruby interpreter, but it's not
+##OS X
+All modern versions of OS X ship with a Ruby interpreter, but it's not
 version 2.2.2, so you'll need to install that version. The easiest way to 
 install Ruby on OS X is to use a package manager called Homebrew.
 
@@ -28,11 +28,11 @@ install ruby and ignore the section about installing Rails--you won't need it fo
 this project):
 https://gorails.com/setup/osx/10.10-yosemite
 
-Linux:
+##Linux:
 If you're running Linux, you have the option of using a built in package manager
-to install ruby, but most people recommend you use a tool called rbenv.
+to install Ruby, but most people recommend you use a tool called rbenv.
 
-Installation instructions for Ubuntu 15.04 can be found here (just install ruby
+Installation instructions for Ubuntu 15.04 can be found here (just install Ruby
 and ignore the section about installing Rails--you won't need it for this
 project):
 https://gorails.com/setup/ubuntu/15.04
@@ -55,12 +55,12 @@ type 'ruby app.rb', press enter, and the server will launch.
 Open a browser, navigate to "http://localhost:4567", and the frontend interface
 will be displayed. 
 
-Now all you have to do is enter in a ticker symbol, and an automcomplete widget
+Now all you have to do is enter in a ticker symbol, and an autocomplete widget
 will pop up. You can press tab to fill in the input box with the first hint
 in the widget, or use the up and down arrows to navigate. Once you select a hint
 you can press enter or tab to fill in the input box.
 
-After the input box is filled in, press enter to display recent performance, and
+After the input box is filled in, press enter to display recent performance and
 an automated buy, sell, or wait decision.
 
 The automated buy sell decision uses a simple moving average crossover strategy.
