@@ -1,0 +1,67 @@
+Project Outline:
+
+For the Stocksplosion Market Analysis project, I decided that a single page 
+application backed by a lightweight Sinatra server would be the best approach.
+A single page application provides the speed and ease of use that client is
+looking for, while the Sinatra backend allows us to run computationally 
+intensive and potentially proprietary performance analysis algorithms on hardware 
+controlled by Stocksplosion.
+
+Keeping in mind the clients desire for a strong ROI, when developing a performance 
+analysis algorithm, I attempted to balance strong predictive capability with 
+ease (and thus cost) of implementation. The algorithm I developed is based on 
+a well tested trading strategy known as crossover.
+
+The algorithm takes two moving averages, one long term and one short term. The
+long term average takes the average price over the last 30 days, and the short 
+term average takes the average price over the last 4 days.
+
+When the short term average is above the long term average by a certain sensitivity
+threshold, the algorithm outputs a buy decision. A sell decision is a result of the
+opposite situation. A wait decision is given when the short term and long term 
+averages are very close.
+
+On the frontend I used Twitter Bootstrap to quickly build a pleasant and easy to 
+use interface. I also implemented an autocomplete text input, and presented the 
+recent performance data as a chart to further facilitate ease of use. 
+
+
+Time Breakdown:
+
+- 1 hour gathering requirements and domain research - 
+	I spent this time going over the project specs and researching the problem 
+	domain, in order to choose the most efficient and predictive algorithm.
+
+- 1 hour designing project architecture -
+	I developed a high level overview of the overall structure of the project. I
+	decided on a single page application backed by Sinatra.
+
+- 1.5 hours implementing and testing the prediction algorithm -
+	I used test driven development to implement the prediction algorithm, to
+	ensure that it functions correctly under all circumstances.
+
+- 2 hours implementing the routing functionality and integrating the client API -
+	I tied the client API into the application and provided URLs for the
+	frontend of the application to access.
+
+- 1 hour building the basic website functionality with Twitter bootstrap and jQuery -
+	I developed a basic interface scaffold in order to lay a foundation for the
+	final interface. 
+
+- 1.5 hours integrating the autocomplete and chart libraries -
+	I added autocomplete and graphing using two popular JavaScript libraries to 
+	address the customers ease of use requirements.
+
+- 1.5 hours deploying and testing the site -
+	I deployed the site to Heroku, so that I could more easily test it on multiple
+	browsers. I test the site on recent versions of Chrome, Internet 
+	Explorer, and Firefox on windows; Firefox on Linux; and Chrome and Safari
+	on OS X.
+
+- 1 hour writing documentation -
+	I wrote installation and use documentation as well as this project overview.
+
+
+Total Project Cost:
+
+10.5 hours x $150 per hour = $1575 total cost

@@ -55,7 +55,7 @@ type 'ruby app.rb', press enter, and the server will launch.
 Open a browser, navigate to "http://localhost:4567", and the frontend interface
 will be displayed. 
 
-Now all you have to do is enter in a ticker symbol, and an autocomplete widget
+Now all you have to do is enter in a ticker symbol and an autocomplete widget
 will pop up. You can press tab to fill in the input box with the first hint
 in the widget, or use the up and down arrows to navigate. Once you select a hint
 you can press enter or tab to fill in the input box.
