@@ -2,12 +2,12 @@ Project Outline:
 
 For the Stocksplosion Market Analysis project, I decided that a single page 
 application backed by a lightweight Sinatra server would be the best approach.
-A single page application provides the speed and ease of use that client is
+A single page application provides the speed and ease of use that the client is
 looking for, while the Sinatra backend allows us to run computationally 
 intensive and potentially proprietary performance analysis algorithms on hardware 
 controlled by Stocksplosion.
 
-Keeping in mind the clients desire for a strong ROI, when developing a performance 
+Keeping in mind the client's desire for a strong ROI, when developing a performance 
 analysis algorithm, I attempted to balance strong predictive capability with 
 ease (and thus cost) of implementation. The algorithm I developed is based on 
 a well tested trading strategy known as crossover.
@@ -54,7 +54,7 @@ Time Breakdown:
 
 - 1.5 hours deploying and testing the site -
 	I deployed the site to Heroku, so that I could more easily test it on multiple
-	browsers. I test the site on recent versions of Chrome, Internet 
+	browsers. I tested the site on recent versions of Chrome, Internet 
 	Explorer, and Firefox on windows; Firefox on Linux; and Chrome and Safari
 	on OS X.
 
