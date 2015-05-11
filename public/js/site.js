@@ -51,7 +51,7 @@ $("#companyDetail").submit(function(e){
   var sym = $("#sym").val();
   $.ajax({
     type: "GET",
-    url: "/company_detail/" + sym + "/4",
+    url: "/company_detail/" + sym + "/30",
     success:function(response){
       //priceData = data['prices']
       chartData.labels = [];

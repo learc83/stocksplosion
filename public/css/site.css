@@ -18,7 +18,7 @@ h1 {
 .typeahead,
 .tt-query,
 .tt-hint {
-  width: 396px;
+  width: 320px;
   padding: 8px 12px;
   font-size: 24px;
   line-height: 30px;
@@ -49,7 +49,7 @@ h1 {
 }
 
 .tt-menu {
-  width: 396px;
+  width: 320px;
   margin: 12px 0;
   padding: 8px 0;
   background-color: #fff;
